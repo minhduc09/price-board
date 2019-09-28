@@ -1,0 +1,263 @@
+body {
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-position: center top;
+    background-color: #060606;
+}
+
+/* font, size, bold, align, color >>>> HEADER*/
+.hbrb, .hbr_, .hb_b, .hb__, .hgrb, .hgr_, .hg_b, .hg__ {
+    font-weight: bold;
+    font-family: arial;
+    font-size: 8pt;
+    text-align: center;
+    color: #ffffff;
+}
+td{
+    text-align: right;
+}
+/* background-color: black */
+.hbrb, .hbr_, .hb_b, .hb__ {
+    background-color: #1D1D1D;
+}
+
+/* background-color: grey */
+.hgrb, .hgr_, .hg_b, .hg__ {
+    background-color: #444;
+}
+
+/* border-bottom: 3px */
+.hbrb, .hb_b, .hgrb, .hg_b {
+    /*2016-07-04 15:01:22 NamLD update border*/
+    /*border-bottom: 1px #ffffff double !important;*/
+    border-bottom: 1px #505050 double !important;
+}
+
+
+
+/* className danh rieng cho cot Code */
+.ccc_, .cccu, .cccd, .cccr, .cccc, .cccf {
+    /*2016-07-04 15:01:22 NamLD update border*/
+    /*border-right: 1px double #fff !important;*/
+    border-right: 1px #505050 double !important;
+    /*cursor: pointer;*/
+    font-family: Arial;
+    /*font-family: 'Segoe UI',Arial;*/
+    font-size: 12px;
+    padding: 0 0 2px 4px;
+    text-align: left;
+    white-space: nowrap;
+    background-color: #1D1D1D;
+}
+
+    .ccc_ input:hover, .cccu input:hover, .cccd input:hover, .cccr input:hover, .cccc input:hover, .cccf input:hover {
+        cursor: default;
+    }
+
+.ccc_ {
+    color: #FFFFFF;
+}
+
+.cccu {
+    color: #00ff00;
+}
+
+.cccd {
+    color: #ff0000;
+}
+
+.cccr {
+    color: #f7ff31;
+}
+
+.cccc {
+    color: #ff00ff;
+}
+
+.cccf {
+    color: #66ccff;
+}
+
+
+
+/* border-right: 3px */
+.brc, .brf, .brr, .bru, .brd, .bra, .br_ {
+    /*border-right: 1px #fff double !important;*/
+    /*2016-07-04 15:01:22 NamLD update border*/
+    border-right: 1px #505050 double !important;
+}
+
+/* background-color: black */
+.brc, .brf, .brr, .bru, .brd, .bra, .br_, .b_c, .b_f, .b_r, .b_u, .b_d, .b_a, .b__ {
+    background-color: #1D1D1D;
+}
+
+/* border-right: 3px */
+.grc, .grf, .grr, .gru, .grd, .gra, .gr_ {
+    /*border-right: 1px #fff double !important;*/
+    /*2016-07-04 15:01:22 NamLD update border*/
+    border-right: 1px #505050 double !important;
+}
+
+/* background-color: grey */
+.grc, .grf, .grr, .gru, .grd, .gra, .gr_, .g_c, .g_f, .g_r, .g_u, .g_d, .g_a, .g__ {
+    background-color: #444444;
+}
+
+/* color: ceiling */
+.brc, .b_c, .grc, .g_c, #cei {
+    color: #ff00ff;
+}
+
+/* color: floor */
+.brf, .b_f, .grf, .g_f, #flo {
+    color: #66ccff;
+}
+
+/* color: ref */
+.brr, .b_r, .grr, .g_r, #ref {
+    color: #f7ff31;
+}
+
+/* color: up */
+.bru, .b_u, .gru, .g_u {
+    color: #00ff00;
+}
+
+/* color: down */
+.brd, .b_d, .grd, .g_d {
+    color: #ff0000 !important;
+}
+
+/* color: white (ATO/ATC + undefined) */
+.bra, .b_a, .gra, .g_a, .br_, .b__, .gr_, .g__ {
+    color: #ffffff;
+}
+
+
+.table-priceboard thead tr th {
+    padding: 7px !important;
+    vertical-align: middle !important;
+}
+
+    
+
+    .table-priceboard thead tr th.headerSortUp,
+    .table-priceboard thead tr th.tablesorter-headerSortUp,
+    .table-priceboard thead tr th.tablesorter-headerAsc {
+  /*      background: url(/css/img/sort_up.png) center bottom no-repeat;*/
+        background-color: #7C7979;
+        /*background-position:0 0;*/
+        /* border-bottom: #000 2px solid; */
+    }
+
+    .table-priceboard thead tr th.headerSortDown,
+    .table-priceboard thead tr th.tablesorter-headerSortDown,
+    .table-priceboard thead tr th.tablesorter-headerDesc {
+        /*background: url(/css/img/sort_down.png) center bottom no-repeat;*/
+        background-color: #7C7979;
+        /*background-position:0px -10px;*/
+    }
+
+
+
+
+
+    .table-priceboard > tbody > tr > td, .table-priceboard > tbody > tr > th, .table-priceboard > tfoot > tr > td, .table-priceboard > tfoot > tr > th, .table-priceboard > thead > tr > td, .table-priceboard > thead > tr > th {
+        /*border: 1px solid #777777;*/
+        /*2016-07-04 15:01:22 NamLD update border*/
+        border: 1px solid #505050;
+    }
+
+        .table-priceboard > tbody > tr > td.bot, .table-priceboard > tbody > tr > th.bot, .table-priceboard > tfoot > tr > td.bot, .table-priceboard > tfoot > tr > th.bot, .table-priceboard > thead > tr > td.bot, .table-priceboard > thead > tr > th.bot {
+            border-bottom: 1px double #00ff00;
+        }
+
+    .table-priceboard > tbody > tr > td, .table-priceboard > tbody > tr > th, .table-priceboard > tfoot > tr > td, .table-priceboard > tfoot > tr > th, .table-priceboard > thead > tr > td, .table-priceboard > thead > tr > th {
+        padding: 0 2px 2px 0;
+        white-space: nowrap;
+        line-height: 1.3em;
+        vertical-align: bottom;
+        /*2016-07-04 15:01:22 NamLD update border*/
+        /*border-top: 1px solid #ddd;*/
+        border-top: 1px solid #505050;
+    }
+
+    .table-priceboard > thead > tr > td, .table-priceboard > thead > tr > th {
+        border-bottom-width: 1px;
+        padding: 4px 0px 4px 0px;
+    }
+
+
+/***********************************************************************/
+
+/*******************custom*********************/
+input[type=checkbox].priceboard {
+    vertical-align: bottom;
+    margin: 4px 4px 0 0px;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+
+input[type=checkbox].priceboard2 {
+    vertical-align: sub;
+    margin: 4px 4px 0 4px;
+    margin-top: 1px \9;
+    line-height: normal !important;
+}
+/*******************************************/
+
+
+
+.container{
+    width: 80%!important;   
+}
+.table-priceboard thead tr th {
+    border: 1px solid #858585 !Important;
+}
+
+.table-priceboard {
+    border: 1px solid #858585 !Important;
+    /*table-layout:fixed;*/
+    width: 100%;
+}
+
+.table{
+    margin-bottom: 0px;
+    /*width: 60%;*/
+}
+
+.function{
+    
+}
+.btn{
+    font-size: 10px;
+    /*margin: 5px;*/
+}
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+.btn:focus, .btn:hover {
+    text-decoration: none;
+    outline: 0!important;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.change{
+    background: #555;
+}

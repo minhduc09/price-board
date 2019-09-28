@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css.css">
+</head>
+<body>
+	<div class="container">
+		<div class="function">
+			<button type="button" class="btn btn-outline-success btn-success add">+</button>
+			<button type="button" class="btn btn-outline-warning btn-danger remove">-</button>
+		</div>
+		
+		<table id="table-priceboard" class="table table-bordered table-priceboard table-responsive tablesorter tablesorter-default" role="grid">
+			<thead style="cursor: pointer;">
+				<tr data-pos="0" role="row" class="tablesorter-headerRow">
+					<th rowspan="2" class="hbrb tablesorter-header tablesorter-headerUnSorted" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="tbLP" unselectable="on" aria-sort="nonestyle="user-select: none;">
+						<div class="tablesorter-header-inner">Mã</div>
+					</th>
+					<th rowspan="2" class="hg_b tablesorter-header tablesorter-headerUnSorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="tbLP" unselectable="on" aria-sort="none" style="user-select: none;">
+						<div class="tablesorter-header-inner">TC</div>
+					</th>
+					<th rowspan="2" class="hg_b tablesorter-header tablesorter-headerUnSorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="tbLP" unselectable="on" aria-sort="none" style="user-select: none;">
+						<div class="tablesorter-header-inner">Trần</div>
+					</th>
+					<th rowspan="2" class="hg_b tablesorter-header tablesorter-headerUnSorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="tbLP" unselectable="on" aria-sort="none" style="user-select: none;">
+						<div class="tablesorter-header-inner">Sàn</div>
+					</th>
+					<th colspan="3" class="hgrb sorter-false tablesorter-header tablesorter-headerUnSorted" data-column="11" scope="col" role="columnheader" aria-disabled="true" unselectable="on" aria-sort="none" aria-label="Khớp lệnh: No sort applied, sorting is disabled" style="cursor: default; user-select: none;">
+						<div class="tablesorter-header-inner">Khớp lệnh</div>
+					</th>
+					<th rowspan="2" class="hg_b tablesorter-header tablesorter-headerUnSorted" data-column="21" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="tbLP" unselectable="on" aria-sort="none" style="user-select: none;">
+						<div class="tablesorter-header-inner">Tổng KL</div>
+					</th>
+				</tr>
+				<tr data-pos="1" role="row" class="tablesorter-headerRow">
+					<th class="hg_b tablesorter-header tablesorter-headerUnSorted" data-column="11" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="tbLP" unselectable="on" aria-sort="none"  style="user-select: none;">
+						<div class="tablesorter-header-inner">Giá</div>
+					</th>
+					<th class="hg_b tablesorter-header tablesorter-headerUnSorted" data-column="12" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="tbLP" unselectable="on" aria-sort="none" style="user-select: none;">
+						<div class="tablesorter-header-inner">KL</div>
+					</th>
+					<th class="hg_b tablesorter-header tablesorter-headerUnSorted" data-column="13" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="tbLP" unselectable="on" aria-sort="none" style="user-select: none;">
+						<div class="tablesorter-header-inner">+/-</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="firstTbody" aria-live="polite" aria-relevant="all">
+				
+			</tbody>
+		
+		</table>
+	</div>
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js.js"></script>
+	
+</script>
+</body>
+</html>
