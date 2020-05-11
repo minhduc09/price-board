@@ -1,7 +1,4 @@
-/*
-2018-07-10 09:56:40 ngocta2
-lam 1 class tao ra UI bang gia chung khoan online va update data random
-tham khao http://priceboard.fpts.com.vn/
+
 --------------------------------------------------------------------------------------------------------------------------------------------
 */
 // "use strict";
@@ -10,7 +7,7 @@ tham khao http://priceboard.fpts.com.vn/
 	// ----------------------------------------------- 
 	// CONSTS
 	const INTERVAL_TIMER_UPDATE 		= 2000,
-		  INTERVAL_TIMER_COLORCHANGE	= 100;
+		  INTERVAL_TIMER_COLORCHANGE	= 500;
 	const COLOR_REFERENCE 	= '#f7ff31',     
 		  COLOR_CEILING 	= '#ff00ff',
 		  COLOR_FLOOR 		= '#66ccff',
@@ -53,7 +50,7 @@ tham khao http://priceboard.fpts.com.vn/
 	// VARS						
 	let m_codeArr = [];		//array that stores stock codes
 	let m_Table = document.getElementById("table-priceboard");
-
+	let m_currentRows = [];
 	// ----------------------------------------------- 
 	// METHODS
 	
@@ -114,13 +111,17 @@ tham khao http://priceboard.fpts.com.vn/
 			removeRow(event);
 		})		
 	}
-
+	
 	// private function
 	function generateData(){
 		// get the length of table's row
 		let vRowLen = m_Table.rows.length;
 		// get a random int between 2 (header rows) and table row's length
-        let vRand = Math.floor(this.getRandomArbitrary(HEADER_ROWS,m_Table.rows.length));
+		let vRand;
+		do{
+			vRand = Math.floor(this.getRandomArbitrary(HEADER_ROWS,m_Table.rows.length));
+		}while(m_currentRows.includes(vRand)===true) //prevent generating the same row in a time
+        m_currentRows.push(vRand);
         // get row's stock values 
         let vRE = Number(m_Table.rows[vRand].cells[CELL_REFERENCE].innerHTML),	// Reference price
             vCE = Number(m_Table.rows[vRand].cells[CELL_CEILING].innerHTML),	// Ceiling price
@@ -136,7 +137,8 @@ tham khao http://priceboard.fpts.com.vn/
         // get the current sum of quantities
         let vSMQ = Number(m_Table.rows[vRand].cells[CELL_SUM_MATCH_QUANTITY].innerHTML);
         // add the new match quantity to the sum
-        vSMQ+=Number(vMQ);
+        vSMQ+=vMQ;
+
         let vMpCss 	= m_Table.rows[vRand].cells[CELL_MATCH_PRICE].style,
             vMqCss 	= m_Table.rows[vRand].cells[CELL_MATCH_QUANTITY].style,
             vMcCss 	= m_Table.rows[vRand].cells[CELL_MATCH_CHANGE].style,
@@ -215,6 +217,7 @@ tham khao http://priceboard.fpts.com.vn/
 		for(let i = 1; i < vChangeRows; i++){
 			generateData();
 		}
+		m_currentRows = [];
 	}
 
 	// private function
@@ -226,12 +229,7 @@ tham khao http://priceboard.fpts.com.vn/
 	initEventHandlers();
 	initTimer();
 	
-	// global var 
-	window.g_classDemo=this;
+
  })(); // Self-Executing Anonymous Function
- 
- // call from outside
-console.info(g_classDemo.getRandomArbitrary(1,100));
-console.info(g_classDemo.getRandomArbitrary(1,100));
-console.info(g_classDemo.getRandomArbitrary(1,100));
+
 // --------------------------------------------------------------------------------------------------------------------------------------------
