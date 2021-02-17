@@ -261,3 +261,12 @@ input[type=checkbox].priceboard2 {
 .change{
     background: #555;
 }
+
+.message{
+    color: #fff;
+}
+
+.tablesorter-header-inner{
+    font-size: 9pt;
+    font-weight: bold;
+}
